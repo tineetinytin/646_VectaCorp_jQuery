@@ -29,6 +29,9 @@
 
 		//------ THE NAVIGATION MENU ------
 
+		//Programmatically add the class “navigation” to each of the 5 navigation menu items.
+		$('nav > ul > li').addClass('navigation');
+
 		//Select the navigation classes and apply a CSS solid, #929CA4, 1px border to them.
 		$('.navigation').css('border', 'solid 1px #929CA4');
 		//Select the navigation classes and apply a color of #CC1C0D to them.
@@ -37,6 +40,12 @@
 		$('.navigation').css('padding', '3px 0 3px 20px');
 		//Select the navigation classes and apply a background color of #DFE3E6.
 		$('.navigation').css('background-color', '#DFE3E6');
+
+		//------ MAIN CONTENT ------
+
+		//Programmatically remove the vprospect, vconvert, and vretain classes from the <p> tags in the main <section> tag.
+		$('.vprospect, .vconvert, .vretain').removeClass();
+		
 
 	});
   </script>
@@ -49,11 +58,11 @@
 		<header></header>
 		<nav>
 			<ul>
-				<li class="navigation"><a href="#">Home</a></li>
-				<li class="navigation"><a href="#">About Us</a></li>
-				<li class="navigation"><a href="#">Solutions</a></li>
-				<li class="navigation"><a href="#">Support</a></li>
-				<li class="navigation"><a href="#">Contact Us</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Solutions</a></li>
+				<li><a href="#">Support</a></li>
+				<li><a href="#">Contact Us</a></li>
 			</ul>
 		</nav>
 		<section>
