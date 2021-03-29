@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab jQuery Events</title>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+        // NUMBER 16
+        // $(function() {
+        //     $('button').click(function () {
+        //         window.alert("Button has been clicked!");
+        //     });
+        // });
+
+        // NUMBER 17
+        // $(function() {
+        //     $('button').bind('click', function () {
+        //         window.alert("Button has been clicked!");
+        //     });
+        // });
+
+        // NUMBER 18
+        // $(function() {
+        //     $('button').on('click', function () {
+        //         window.alert("Button has been clicked!");
+        //     });
+        // });
+
+        // NUMBER 19
+        // $(function() {
+        //     $('button').on('click', function () {
+        //         window.alert("Button has been clicked!");
+        //     });
+        // });
+
+        // NUMBER 20
+        // $(function() {
+
+        //     $('body').on({
+        //         mouseenter: function () {
+        //             window.alert('Cursor entered the div!');
+        //         },
+        //         mouseleave: function () {
+        //             window.alert('Cursor left the div!');
+        //         },
+        //         click: function () {
+        //             window.alert('Cursor clicked the div!');
+        //         }
+        //     }, 'div');
+        // });
+
+        // NUMBER 21
+        // $(function() {
+
+        //     $('body').on({
+        //         mouseenter: function () {
+        //             $('span').text('You entered the box!');
+        //         },
+        //         mouseleave: function () {
+        //             $('span').text('You left the box!');
+        //         },
+        //         click: function () {
+        //             $('span').text('You clicked the box!');
+        //         }
+        //     }, 'div');
+        //     });
+
+        // NUMBER 22
+        // $(function() {
+        //     $('a').click(function(event) {
+        //         event.preventDefault();
+        //         $(this).css('color', 'red');
+        //         window.alert(event.target.nodeName + ' triggered the event.');
+        //      });
+        // });
+
+        // NUMBER 23
+        // $(function() {
+        //     $(window).resize(function () {
+        //         $('.width').text($(window).width());
+        //         $('.height').text($(window).height());
+        //     });
+        // });
+
+        // NUMBER 24
+        // $(function() {
+        //     $('input').focus(
+        //     function(){
+        //         $(this).css({'background-color' : 'lightgray'});
+        //     });
+
+        //     $('input').blur(
+        //     function(){
+        //         $(this).css({'background-color' : '#ffffff'});
+        //     });
+   
+        // NUMBER 25
+        
+         $(function() {
+            $("#name").focus();
+
+            $("#fillForm").submit(
+		        function(event) {
+
+                    var isValid = true;
+                    if (isValid = true) {
+                        $('#name, #email').css('border-color', 'green');
+                        event.preventDefault(); 
+
+                    }
+
+                    
+                    // validate the first name entry
+                    var fname = $('#name').val().trim();
+                    if (fname == '') {
+                        $('#name').css('border-color', 'red');
+                        isValid = false;
+                        event.preventDefault(); 
+                    }
+
+                    var mail = $('#email').val().trim();
+                    if (mail == '') {
+                        $('#email').css('border-color', 'red');
+                        isValid = false;
+
+                    window.alert('This field is required.');
+                    }; 
+                    
+
+
+                if (isValid == false) {
+				event.preventDefault(); 			
+			}
+
+        });
+    });
+
+
+    </script>
+</head>
+<body>
+
+    <!-- <button id="button">Click Me</button> 
+    <button id="button">Click Me 2</button><br>
+
+    <br><div style = "width:400px; height:400px; background-color:red;">I am a div tag</div><br>
+
+    
+    <br><div style = "width:400px; height:400px; background-color:blue;">
+        <span style = "font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; "></span>
+    
+    </div><br>
+
+    <a href="www.http://modulemedia.com">Link</a><br>
+
+    <br><div class="div" style="width:400px; height:400px; background-color:orange;">
+    <span class="width"></span><br>
+    <span class="height"></span>
+    </div> -->
+    
+    <!-- <input> -->
+
+    <form id="fillForm" name="fillForm" action="#" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span>*</span><br>
+                    
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email">
+        <span>*</span><br>
+
+        <label>&nbsp;</label>
+	    <input type="submit" id="submit" name="submit" value="Submit">
+
+    </form>
+    
+</body>
+</html>
+
